@@ -7,12 +7,13 @@
 
 import Foundation
 
-struct MemoryGame<CardContent> {
+struct MemoryGame<CardContent> where CardContent:Equatable {
     struct Card: Identifiable {
         let id = UUID()
         var isFaceUp = false
         var isMatched = false
         let content: CardContent
+        var previousSeen = false
     }
     
     private(set) var cards: Array<Card>
@@ -26,21 +27,38 @@ struct MemoryGame<CardContent> {
             cards.append(Card(content: content))
             cards.append(Card(content: content))
         }
+        cards.shuffle()
     }
     
-    mutating func chooseCard(_ chosenCard:Card) where CardContent:Equatable{
+    private(set) var score = 0
+    
+    mutating func chooseCard(_ chosenCard:Card){
         if let chosenIndex = cards.indices.first(where: { index in
             cards[index].id == chosenCard.id
         }),
            !cards[chosenIndex].isFaceUp,
            !cards[chosenIndex].isMatched
         {
+            // Only one card faced up
             if let indexOfFacedUpCard = indexOfTheOnlyOneFacedUpCard{
+                //if match
                 if cards[indexOfFacedUpCard].content == cards[chosenIndex].content{
                     cards[indexOfFacedUpCard].isMatched = true
                     cards[chosenIndex].isMatched = true
+                    score+=2
+                // Not macth
+                } else {
+                    if cards[indexOfFacedUpCard].previousSeen{
+                        score-=1
+                    }
+                    if cards[chosenIndex].previousSeen{
+                        score-=1
+                    }
                 }
                 indexOfTheOnlyOneFacedUpCard = nil
+                cards[chosenIndex].previousSeen = true
+                cards[indexOfFacedUpCard].previousSeen = true
+            // Two cards faceUP or Begin of game
             } else {
                 for index in cards.indices{
                     cards[index].isFaceUp = false
@@ -49,9 +67,12 @@ struct MemoryGame<CardContent> {
             }
             cards[chosenIndex].isFaceUp = true
         }
-        
-        
     }
-    
-    
+}
+
+struct Theme<CardContent> {
+    let name: String
+    var emojis: Array<CardContent>
+    let numberOfPairCard: Int
+    let color: String
 }
