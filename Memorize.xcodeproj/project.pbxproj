@@ -14,7 +14,7 @@
 		66A269AD2A55BBF500C21345 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A269AC2A55BBF500C21345 /* MemoryGame.swift */; };
 		66A269AF2A55C1B600C21345 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A269AE2A55C1B600C21345 /* EmojiMemoryGame.swift */; };
 		66A269B12A5B8DDE00C21345 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 66A269B02A5B8DDE00C21345 /* README.md */; };
-		66A269B42A5B8EC500C21345 /* gamplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A269B32A5B8EC500C21345 /* gamplay.png */; };
+		66A269B42A5B8EC500C21345 /* gameplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A269B32A5B8EC500C21345 /* gameplay.png */; };
 		66A269B62A5B8EE400C21345 /* themeswitch.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A269B52A5B8EE400C21345 /* themeswitch.png */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,7 @@
 		66A269AC2A55BBF500C21345 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		66A269AE2A55C1B600C21345 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		66A269B02A5B8DDE00C21345 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		66A269B32A5B8EC500C21345 /* gamplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamplay.png; sourceTree = "<group>"; };
+		66A269B32A5B8EC500C21345 /* gameplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameplay.png; sourceTree = "<group>"; };
 		66A269B52A5B8EE400C21345 /* themeswitch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = themeswitch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,7 +45,9 @@
 		66A2698A2A53235E00C21345 = {
 			isa = PBXGroup;
 			children = (
+				66A269B02A5B8DDE00C21345 /* README.md */,
 				66A269952A53235E00C21345 /* Memorize */,
+				66A269B22A5B8E4000C21345 /* screenshots */,
 				66A269942A53235E00C21345 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,8 +63,6 @@
 		66A269952A53235E00C21345 /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
-				66A269B02A5B8DDE00C21345 /* README.md */,
-				66A269B22A5B8E4000C21345 /* screenshots */,
 				66A269AA2A55B8F600C21345 /* Model */,
 				66A269AB2A55B90700C21345 /* ViewModel */,
 				66A269A82A55B8D600C21345 /* View */,
@@ -108,7 +108,7 @@
 		66A269B22A5B8E4000C21345 /* screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				66A269B32A5B8EC500C21345 /* gamplay.png */,
+				66A269B32A5B8EC500C21345 /* gameplay.png */,
 				66A269B52A5B8EE400C21345 /* themeswitch.png */,
 			);
 			path = screenshots;
@@ -175,7 +175,7 @@
 				66A269B12A5B8DDE00C21345 /* README.md in Resources */,
 				66A269B62A5B8EE400C21345 /* themeswitch.png in Resources */,
 				66A2699E2A53236000C21345 /* Preview Assets.xcassets in Resources */,
-				66A269B42A5B8EC500C21345 /* gamplay.png in Resources */,
+				66A269B42A5B8EC500C21345 /* gameplay.png in Resources */,
 				66A2699B2A53236000C21345 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

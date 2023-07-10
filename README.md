@@ -1,8 +1,5 @@
 # Memorize Game App
 
-![Swift](https://img.shields.io/badge/Swift-5.5-orange)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-2.0-green)
-
 The Memorize Game App is an iOS mobile application developed using SwiftUI and MVVM architecture. It provides an engaging memory-based game where users can switch between different themes and track their overall score throughout the game.
 
 ## Features
